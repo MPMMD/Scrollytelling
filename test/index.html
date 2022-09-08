@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+    </div>
+    <section class="container">
+        <div class="content">
+            <h1>Scroll to Begin</h1>
+            <p>Start it like this..</p>
+            <div class="innerContent">
+                <h1>and so it begins</h1>
+                <p>Start it like this..</p>
+            </div>
+        </div>
+
+    </section>
+    
+
+    <!-- progressbar -->
+    <script>
+        window.onscroll = function() {myFunction()};
+
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        }
+    </script>
+</body>
+</html>

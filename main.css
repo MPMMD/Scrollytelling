@@ -9,7 +9,7 @@ body {
     position: fixed;
     bottom: 0;
     right: 0;
-    /* width: 70%; */
+    width: 50%;
 }
 
 #set-height {
@@ -23,7 +23,7 @@ section {
 }
 
 .content {
-    position: sticky;
+    position: relative;
     position: -webkit-sticky;
     width: 100%;
     top: 33.3%;
