@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <!-- saved from url=(0087)https://moodle.zealand.dk/pluginfile.php/413207/mod_resource/content/1/multivideos.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html lang="en">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test</title>
@@ -9,6 +10,10 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <!-- <meta name="description" content="">
     <meta name="keywords" content=""> -->
+    <!-- link adobe fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/xac5ndp.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
     <!-- intro -->
@@ -16,50 +21,49 @@
     <div class="pipes"></div>
     <div class="fade"></div>
     <div class="app">
-        <div id="bound-one" class="scroll-bound">
-            <div class="content">
-                <video width="600" muted="" preload="">
-                    <source src="https://cdn.ananaspizza.de/file/malte-image-store/v9-webm.webm" type="video/webm">
-                    <p>Your user agent does not support the HTML5 Video element.</p>
-                </video>
-                <a href="#bound-two">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                </a>
-            </div>
+    <div class="container ">
+        <div class="animate__animated animate__fadeInLeft containerText">
+            <p>My days plagued by <span class="altFont"> shame</span>.</p>
+            <p>The time I have during the day is limited.</p>
+            <p>But my routine was like any other out there.</p>
         </div>
-
-            <!-- <h1>You sure you want to proceed?</h1> -->
-            <p>My days filled with light <br> it is never night</p>
-        </div>
+    </div>
+    <div class="container containerText">
+        <!-- animate text class -->
+        <p>Wake</p>
+        <p>Eat</p>
+        <p>Sleep</p>
+        <p>Repeat</p>
+    </div>
+    <div class="container containerText">
+        <p>So how did it come to this?</p>
+    </div>
+    <div class="buffer"></div>
    
-        <div class="inbetweens">
-            <!-- <h1>You sure you want to proceed?</h1> -->
-            <p>My days filled with light <br> it is never night</p>
-        </div>
-        <div class="inbetweens inbetweens-black">
+    <div class="inbetweens"></div>
+        <!-- <h1>You sure you want to proceed?</h1> -->
+        <!-- <p>My days filled with light <br> it is never night</p> -->
 
-        </div>
+
         
-        <div id="bound-two" class="scroll-bound">
-            <div class="content">
-                <p>MP4 Video - Keyframe Interval 1</p>
-                 <video width="600" muted="" preload="">
-                   <source src="https://cdn.ananaspizza.de/file/malte-image-store/keyframe-interval-1.mp4" type="video/mp4">
-                <p>Your user agent does not support the HTML5 Video element.</p>
-          </video>
-            </div>
+    <div id="bound-two" class="scroll-bound">
+        <div class="content">
+            <p>MP4 Video - Keyframe Interval 1</p>
+            <video width="600" muted="" preload="">
+            <source src="https://cdn.ananaspizza.de/file/malte-image-store/keyframe-interval-1.mp4" type="video/mp4">
+            <p>Your user agent does not support the HTML5 Video element.</p>
+            </video>
         </div>
+    </div>
         
-        <div id="bound-three" class="scroll-bound">
-            <div class="content">
-                <p>MP4 Video - Keyframe Interval 20</p>
-                 <video width="600" muted="" preload="">
-                   <source src="https://cdn.ananaspizza.de/file/malte-image-store/keyframe-interval-20.mp4" type="video/mp4">
-                <p>Your user agent does not support the HTML5 Video element.</p>
-          </video>
-            </div>
+    <div id="bound-three" class="scroll-bound">
+        <div class="content">
+            <p>MP4 Video - Keyframe Interval 20</p>
+            <video width="600" muted="" preload="">
+                <source src="https://cdn.ananaspizza.de/file/malte-image-store/keyframe-interval-20.mp4" type="video/mp4">
+            <p>Your user agent does not support the HTML5 Video element.</p>
+            </video>
         </div>
-        
     </div>
 
 
@@ -102,6 +106,6 @@
     registerVideo("#bound-one", "#bound-one video");
     registerVideo("#bound-two", "#bound-two video")
     registerVideo("#bound-three", "#bound-three video")
-</script>
-
-</body></html>
+    </script>
+</body>
+</html>

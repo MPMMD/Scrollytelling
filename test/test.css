@@ -3,37 +3,55 @@ html{
 }
 * { box-sizing: border-box; }
 body {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 0;
     font-family: sans-serif;
     font-size: 1.4rem;
-    background-color: #e6e6e6;
+    /* background-color: #e6e6e6; */
+    background-image: url(/video/intro.gif);
 }
-/* intro */
 header{
     margin: 0;
     height: 100vh;
-    background-color: black;
-    background-image: url(/video/Intro.gif);
+    /* background-color: black; */
+
     z-index: -5;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+p{
+    margin-top: 0;
+    font-family: courier-std, monospace;
+    /* font-family: typeka, sans-serif; */
+    /* font-family: nitti-typewriter-normal, sans-serif; */
+
+}
+.altFont{ 
+    font-family: nitti-typewriter-cameo, sans-serif;
+}
 h1{
     margin-top: 0;
     margin-left: 3em;
     padding-top: 2em;
 }
-#wrapper{
-    position: absolute;
-    margin: 0;
-    height: 100%;
-    width: 100%;
+/* not sure if I want a buffer or another one of those custom transitions, depends on video */
+.buffer{background-color: #e6e6e6; height: 55vh;}
+.container{
+    position: relative;
+    background-color: #e6e6e6;
+    height: 100vh;
+}
+.containerText{
+    padding: calc(50vh - 1em) 0;
 }
 .fade{
-    background-image: url(/test/Gradiant.png);
-    height: 100vh;
+    background-image: url(/test/testfade.png);
+    height: 1430px;
 }
 #bound-one {
     background: #e6e6e6;
@@ -54,7 +72,6 @@ h1{
     top:0;
     padding-top: 3em;
 }
-
 video {
     margin-left: 10%;
     width: 50%;
@@ -66,6 +83,7 @@ p{
     position: relative;
     height: 100vh;
     text-align: center;
+    background-color: #2d2d2d;
     /* font: ; */
 }
 .inbetweens-black{
