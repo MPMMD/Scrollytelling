@@ -49,6 +49,27 @@ h1{
 .containerText{
     padding: calc(50vh - 1em) 0;
 }
+/* fade in from left from https://www.tutorialspoint.com/online_html_editor.php */
+/* triggering on scroll in https://coolcssanimation.com/how-to-trigger-a-css-animation-on-scroll/ */
+@keyframes textEnter{
+    0%{
+        opacity: 0;
+        transform: translateX(-20vw);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@media (prefers-reduced-motion: no-preference) {
+.textFade{
+    animation-name: textEnter;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+    /* or{ animate textEnter 1.5s 1 */
+}
+}
+
 .fade{
     background-image: url(/test/testfade.png);
     height: 1430px;
