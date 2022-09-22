@@ -10,12 +10,39 @@
 
 // observer.observe(document.querySelector('.animateText'));
 
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-        entry.classList.add('textFade');
+// const observer = new IntersectionObserver(entries => {
+//     entries.forEach(entry => {
+//         if (entry.isIntersecting) {
+//         entry.target.classList.add('textFade');
+//       }
+//     });
+// });
+
+// observer.observe(document.querySelector('.animateText'));
+
+
+// https://css-tricks.com/scroll-triggered-animation-vanilla-javascript/ - this one works
+function scrollTrigger(selector){
+  let els = document.querySelectorAll(selector)
+  els = Array.from(els)
+  els.forEach(el => {
+    addObserver(el)
+  })
+}
+function addObserver(el){
+    // We are creating a new IntersectionObserver instance
+    let observer = new IntersectionObserver((entries, observer) => { // This takes a callback function that receives two arguments: the elements list and the observer instance.
+      entries.forEach(entry => {
+        // `entry.isIntersecting` will be true if the element is visible
+      if(entry.isIntersecting) {
+        entry.target.classList.add('textFade')
+        // We are removing the observer from the element after adding the active class
+        observer.unobserve(entry.target)
       }
-    });
-});
-  
-  observer.observe(document.querySelector('.animateText'));
+    })
+  })
+  // Adding the observer to the element
+  observer.observe(el)
+}
+// Example usage
+scrollTrigger('.animateText')

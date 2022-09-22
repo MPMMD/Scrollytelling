@@ -24,7 +24,14 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
 }
+h1{
+    margin-top: 0;
+    margin-left: 3em;
+    padding-top: 2em;
+}
 p{
+    height: auto;
+    width: auto;
     margin-top: 0;
     font-family: courier-std, monospace;
     /* font-family: typeka, sans-serif; */
@@ -34,10 +41,23 @@ p{
 .altFont{ 
     font-family: nitti-typewriter-cameo, sans-serif;
 }
-h1{
-    margin-top: 0;
-    margin-left: 3em;
-    padding-top: 2em;
+/* fade in from left from https://www.tutorialspoint.com/online_html_editor.php */
+/* triggering on scroll in https://coolcssanimation.com/how-to-trigger-a-css-animation-on-scroll/ */
+@keyframes textEnter{
+    0%{
+        opacity: 0;
+        transform: translateX(-15vw);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.textFade{
+    animation-name: textEnter;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    /* or{ animate textEnter 1.5s 1 */
 }
 /* not sure if I want a buffer or another one of those custom transitions, depends on video */
 .buffer{background-color: #e6e6e6; height: 55vh;}
@@ -47,32 +67,15 @@ h1{
     height: 100vh;
 }
 .containerText{
+    height: inherit;
     padding: calc(50vh - 1em) 0;
 }
-/* fade in from left from https://www.tutorialspoint.com/online_html_editor.php */
-/* triggering on scroll in https://coolcssanimation.com/how-to-trigger-a-css-animation-on-scroll/ */
-@keyframes textEnter{
-    0%{
-        opacity: 0;
-        transform: translateX(-20vw);
-    }
-    100%{
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-@media (prefers-reduced-motion: no-preference) {
-.textFade{
-    animation-name: textEnter;
-    animation-duration: 2.5s;
-    animation-iteration-count: 1;
-    /* or{ animate textEnter 1.5s 1 */
-}
-}
-
 .fade{
     background-image: url(/test/testfade.png);
     height: 1430px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #bound-one {
     background: #e6e6e6;

@@ -13,8 +13,8 @@
     <!-- link adobe fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/xac5ndp.css">
     <!-- animate css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <script src="/script.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> -->
+    <script src="/script.js" defer></script>
 </head>
 <body>
     <!-- intro -->
@@ -24,7 +24,7 @@
     <div class="app">
     <div class="container">
         <div class="containerText">
-            <p class="animateText textFade">My days plagued by <span class="altFont"> shame</span>.</p>
+            <p class="animateText">My days plagued by <span class="altFont"> shame</span>.</p>
             <p class="animateText">The time I have during the day is limited.</p>
             <p class="animateText">But my routine was like any other out there.</p>
         </div>
@@ -46,7 +46,15 @@
         <!-- <p>My days filled with light <br> it is never night</p> -->
 
 
-        
+    <div id="bound-one" class="scroll-bound">
+        <div class="content">
+            <p>MP4 Video - Keyframe Interval 1</p>
+            <video width="600" muted="" preload="">
+            <source src="https://cdn.ananaspizza.de/file/malte-image-store/keyframe-interval-1.mp4" type="video/mp4">
+            <p>Your user agent does not support the HTML5 Video element.</p>
+            </video>
+        </div>
+    </div>
     <div id="bound-two" class="scroll-bound">
         <div class="content">
             <p>MP4 Video - Keyframe Interval 1</p>
@@ -69,14 +77,14 @@
 
 <script>
     /* Scrollbar */
-    window.onscroll = function() {myFunction()};
+    // window.onscroll = function() {myFunction()};
 
-    function myFunction() {
-        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        var scrolled = (winScroll / height) * 100;
-        document.getElementById("myBar").style.width = scrolled + "%";
-    }
+    // function myFunction() {
+    //     var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    //     var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    //     var scrolled = (winScroll / height) * 100;
+    //     document.getElementById("myBar").style.width = scrolled + "%";
+    // }
 
     /* Video Player */
     const registerVideo = (bound, video) => {
