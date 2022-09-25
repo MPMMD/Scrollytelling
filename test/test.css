@@ -30,6 +30,7 @@ h1{
     padding-top: 2em;
 }
 p{
+    font-size: 24pt;
     height: auto;
     width: auto;
     margin-top: 0;
@@ -77,6 +78,19 @@ p{
     background-repeat: no-repeat;
     background-size: cover;
 }
+.fadeWhiteBlack{
+    background-image: url(whiteblackfade.png);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* .fadeInverse{
+    background-image: url();
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
 #bound-one {
     background: #e6e6e6;
 }
@@ -94,11 +108,11 @@ p{
     width: 100%;
     position: sticky;
     top:0;
-    padding-top: 3em;
+    background-color: transparent;
 }
 video {
-    margin-left: 10%;
-    width: 50%;
+
+    width: 100%;
 }
 p{
     text-align: center;
