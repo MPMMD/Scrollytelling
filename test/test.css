@@ -4,7 +4,7 @@ html{
 ::-webkit-scrollbar{width: 5px;}
 ::-webkit-scrollbar-track{background:#2d2d2d;}
 ::-webkit-scrollbar-thumb{background: #e6e6e6;}
-::-webkit-scrollbar-thumb:hover{background-color: red;}
+::-webkit-scrollbar-thumb:hover{background-color: rgb(242, 0, 0);}
 * {box-sizing: border-box;}
 body {
     background-attachment: fixed;
@@ -112,11 +112,14 @@ p{
     width: 100%;
     position: sticky;
     top:0;
-    background-color: transparent;
+    background-color: black;
 }
 video {
-
+    position: relative;
+    top: -.1px;
+    /* height: calc(100% + 1px); */
     width: 100%;
+    object-fit: cover;
 }
 p{
     text-align: center;
