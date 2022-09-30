@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test</title>
     <link rel="stylesheet" href="test.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
     <!-- <meta name="description" content="">
     <meta name="keywords" content=""> -->
     <!-- link adobe fonts -->
@@ -39,16 +39,23 @@
     <div class="container containerText">
         <p class="animateText">So I went in.</p>
     </div>
+    <!-- animation of zooming in on the house? -->
+    <div class="container house"></div>
     <div class="fadeWhiteBlack"></div>
     <!-- <div class="buffer"></div> -->
-   
-    <!-- door opens -->
-    <!-- Hello? -->
-    <!-- light flicks on -->
-    <!-- finds the ball -->
-    <!-- glitches with creepy head back to the ball, then into the living room -->
 
-    <div class="inbetweens"></div>
+    <!-- abandoned house -->
+   
+    <!-- door opens goes in-->
+    <!-- "Hello?" -->
+    <!-- *slides of furniture that's too clean compared to it's an abandoned house* -->
+    <!-- as time passed with nothing happening, I began to feel comfortable.-->
+    <!-- I recall the rich kid in the neighbourhood bragging about his secret hideout. -->
+    <!-- It must be this one -->
+    <!-- finds the ball -->
+    <!-- glitches with creepy head back to the ball, then into the living room /// scratch the living room-->
+
+
         <!-- <h1>You sure you want to proceed?</h1> -->
         <!-- <p>My days filled with light <br> it is never night</p> -->
 
@@ -56,15 +63,26 @@
     <div id="bound-one" class="scroll-bound">
         <div class="content">
             <video muted="" preload="">
-            <source src="/video/doortest2.mp4" type="video/mp4">
+            <source src="/video/dooropening.mp4" type="video/mp4">
             <p>Your user agent does not support the HTML5 Video element.</p>
             </video>
         </div>
     </div>
+
+    <!-- furnitures and MCs thoughts -->
+    <div class="inbetweens"></div>
+
+    <!-- ! Ide, ændre til at mc rotatere til tv'et ser på den lidt, derefter roterer tilbage igen og ser bolden
+        dem glitcher derefter   // kan eventuelt splitte videon op der til 2, så det er lidt bedre på web
+    og det fader til sort
+    hvorefter man ser en silhoutte af en person som hjælpe MC op fra 1. persons view. Tror et stilbilledet virker -->
+
+    <!-- men den er ikke så lang. Mangler living room også. Tilføj noget før tv'et - Living room efter furnitures?
+     -->
     <div id="bound-two" class="scroll-bound">
         <div class="content">
             <video muted="" preload="">
-            <source src="https://cdn.ananaspizza.de/file/malte-image-store/keyframe-interval-1.mp4" type="video/mp4">
+            <source src="/video/Merge.mp4" type="video/mp4">
             <p>Your user agent does not support the HTML5 Video element.</p>
             </video>
         </div>
@@ -80,16 +98,6 @@
     </div>
 
 <script>
-    /* Scrollbar */
-    // window.onscroll = function() {myFunction()};
-
-    // function myFunction() {
-    //     var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    //     var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    //     var scrolled = (winScroll / height) * 100;
-    //     document.getElementById("myBar").style.width = scrolled + "%";
-    // }
-
     /* Video Player */
     const registerVideo = (bound, video) => {
         bound = document.querySelector(bound);

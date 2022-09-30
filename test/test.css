@@ -1,3 +1,11 @@
+:root{
+    /* not 100% sure except the darkest one for now. */
+    --whitest-color: #e5e5e5;
+    --darkalt-color: #2d2d2d;
+    --dark-color: #202020;
+    --darkest-color: #141414;
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -128,7 +136,7 @@ p{
     position: relative;
     height: 100vh;
     text-align: center;
-    background-color: #2d2d2d;
+    background-color: var(--darkest-color);
     /* font: ; */
 }
 .inbetweens-black{
@@ -141,4 +149,9 @@ p{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.house{
+    background-image: url(house.png);
+    background-position: center;
+    background-repeat: no-repeat;
 }
