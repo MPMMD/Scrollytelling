@@ -83,6 +83,9 @@ p{
     height: inherit;
     padding: calc(50vh - 1em) 0;
 }
+.containerTextWhite{
+    color: #e5e5e5;
+}
 .fade{
     background-image: url(/test/testfade.png);
     height: 1430px;
@@ -138,6 +141,9 @@ p{
     text-align: center;
     background-color: var(--darkest-color);
     /* font: ; */
+}
+.inbetweens img{
+    margin-bottom: 1em;
 }
 .inbetweens-black{
     background-image: url(black-paint-splatter.jpg);

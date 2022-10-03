@@ -24,9 +24,19 @@
     <div class="app">
     <div class="container">
         <div class="containerText">
-            <p class="animateText">My days plagued by <span class="altFont"> shame</span>.</p>
+            <p class="animateText">I live plagued by <span class="altFont"> shame</span>.</p>
             <p class="animateText">The time I have during the day is limited.</p>
-            <p class="animateText">But my routine was like any other out there.</p>
+            <p class="animateText">I fear it like a child.</p>
+        </div>        
+    </div>
+    <div class="container">
+        <div class="containerText">
+            <p> They did not believe me even when I told them. </p>
+            <p> And I bet neighter will you.</p>
+        
+            <p> The fact that you are still here.</p>
+            <p> Tells me that you want to listen to my story.</p>
+            <p> It wont take too long.</p>
         </div>
     </div>
     <div class="container containerText">
@@ -63,8 +73,7 @@
     <div id="bound-one" class="scroll-bound">
         <div class="content">
             <video muted="" preload="">
-            <source src="/video/dooropening.mp4" type="video/mp4">
-            <p>Your user agent does not support the HTML5 Video element.</p>
+            <source src="/video/dooropening2.mp4" type="video/mp4">
             </video>
         </div>
     </div>
@@ -79,8 +88,13 @@
 
     <!-- men den er ikke så lang. Mangler living room også. Tilføj noget før tv'et - Living room efter furnitures?
      -->
-
-     <div class="inbetweens"><img src="Mirror.png" alt="mirror"></div>
+     <div class="inbetweens containerTextWhite">
+            <p>Hello?</p>
+     </div>
+     <div class="inbetweens"></div>
+     <div class="inbetweens containerTextWhite">
+        <img src="Mirror.png" alt="mirror">
+    </div>
      <div class="inbetweens"><img src="dresser.png" alt="dresser"></div>
 
     <div id="bound-two" class="scroll-bound">
@@ -99,35 +113,12 @@
         </div>
     </div>
 
-<script>
-    /* Video Player */
-    const registerVideo = (bound, video) => {
-        bound = document.querySelector(bound);
-        video = document.querySelector(video);
-        
-        const scrollVideo = ()=>{
-            if(video.duration) { // Hvis videoen kører 
-                // window.scrollY = scroll på y-axen, altså om vi scroller op eller ned
-                const distanceFromTop = window.scrollY + bound.getBoundingClientRect().top;
-
-                // Udregning af hvor langt vi har scrollet i procent
-                const rawPercentScrolled = (window.scrollY - distanceFromTop) / (bound.scrollHeight - window.innerHeight);
-                const percentScrolled = Math.min(Math.max(rawPercentScrolled, 0), 1);
-                
-                video.currentTime = video.duration * percentScrolled;
-            }
-            requestAnimationFrame(scrollVideo);
-        }
-
-        requestAnimationFrame(scrollVideo);
-    }
-
-    // Registrer alle video elementer på siden som skal kunne scrolles.
-    // Første variable er det div-id som videoen er en del af.
-    // Anden varaible er egentlig bare at finde selve video tagget inden for div id.
-    registerVideo("#bound-one", "#bound-one video");
-    registerVideo("#bound-two", "#bound-two video")
-    registerVideo("#bound-three", "#bound-three video")
-    </script>
+    <div class="container">
+        <img src="" alt=""> or gif? still image of the man silhouette, then scroll to the gif. with glitches of the mask on his face
+        <p>I woke up just like that</p>
+    </div>
+    <footer class="outtro">
+        <p>Since that day it have been occupying my mind.</p>
+    </footer>
 </body>
 </html>

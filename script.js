@@ -50,22 +50,67 @@ scrollTrigger('.animateText')
 
 
 // // From Jespers Template
-// var frameNumber = 0, // start video at frame 0
+ var frameNumber = 0, // start video at frame 0
 // // lower numbers = faster playback
 
-// playbackConst = 50, 
+playbackConst = 1000, 
 // // get page height from video duration
 
-// vid = document.getElementById('bound-one'); 
+ vid = document.getElementById('bound-one'); 
 // // var vid = $('#v0')[0]; // jquery option
 
-
-
 // // Use requestAnimationFrame for smooth playback
-// function scrollPlay(){  
-// var frameNumber  = window.pageYOffset/playbackConst;
-// vid.currentTime  = frameNumber;
-// window.requestAnimationFrame(scrollPlay);
-// }
+ function scrollPlay(){  
+ var frameNumber  = window.pageYOffset/playbackConst;
+ vid.currentTime  = frameNumber;
+ window.requestAnimationFrame(scrollPlay);
+ }
 
-// window.requestAnimationFrame(scrollPlay);
+ window.requestAnimationFrame(scrollPlay);
+//
+
+ 
+ playbackConst2 = 50, 
+ // // get page height from video duration
+ 
+  vid2 = document.getElementById('bound-two'); 
+ // // var vid = $('#v0')[0]; // jquery option
+ 
+ // // Use requestAnimationFrame for smooth playback
+  function scrollPlay2(){  
+  var frameNumber  = window.pageYOffset/playbackConst2;
+  vid2.currentTime  = frameNumber;
+  window.requestAnimationFrame(scrollPlay2);
+  }
+ 
+  window.requestAnimationFrame(scrollPlay2);
+
+
+     /* Video Player */
+     const registerVideo = (bound, video) => {
+      bound = document.querySelector(bound);
+      video = document.querySelector(video);
+      
+      const scrollVideo = ()=>{
+          if(video.duration) { // Hvis videoen kører 
+              // window.scrollY = scroll på y-axen, altså om vi scroller op eller ned
+              const distanceFromTop = window.scrollY + bound.getBoundingClientRect().top;
+
+              // Udregning af hvor langt vi har scrollet i procent
+              const rawPercentScrolled = (window.scrollY - distanceFromTop) / (bound.scrollHeight - window.innerHeight);
+              const percentScrolled = Math.min(Math.max(rawPercentScrolled, 0), 1);
+              
+              video.currentTime = video.duration * percentScrolled;
+          }
+          requestAnimationFrame(scrollVideo);
+      }
+
+      requestAnimationFrame(scrollVideo);
+  }
+
+  // Registrer alle video elementer på siden som skal kunne scrolles.
+  // Første variable er det div-id som videoen er en del af.
+  // Anden varaible er egentlig bare at finde selve video tagget inden for div id.
+  registerVideo("#bound-one", "#bound-one video");
+  registerVideo("#bound-two", "#bound-two video")
+  registerVideo("#bound-three", "#bound-three video")
