@@ -13,7 +13,7 @@ html{
 ::-webkit-scrollbar-track{background:#2d2d2d;}
 ::-webkit-scrollbar-thumb{background: #e6e6e6;}
 ::-webkit-scrollbar-thumb:hover{background-color: rgb(242, 0, 0);}
-* {box-sizing: border-box;}
+* {margin: 0; box-sizing: border-box;}
 body {
     background-attachment: fixed;
     background-position: center;
@@ -38,19 +38,19 @@ header{
 }
 h1{
     text-align: right;
-    margin-top: 0;
+    margin-top: 2em;
     margin-left: 3em;
     margin-right: 3em;
     padding-top: 2em;
     font-family: nitti-typewriter-cameo, sans-serif;
     color: white;
-    font-size: 14pt;
+    font-size: 24pt;
 }
 p{
     font-size: 24pt;
     height: auto;
     width: auto;
-    margin-top: 0;
+    padding-top: 1em;
     font-family: courier-std, monospace;
     /* font-family: typeka, sans-serif; */
     /* font-family: nitti-typewriter-normal, sans-serif; */
@@ -77,9 +77,8 @@ p{
     animation-iteration-count: 1;
     /* or{ animate textEnter 1.5s 1 */
 }
-
 /* not sure if I want a buffer or another one of those custom transitions, depends on video */
-.buffer{background-color: #e6e6e6; height: 55vh;}
+.buffer{height: 50vh; background-color: #e5e5e5;}
 .container{
     position: relative;
     background-color: #e6e6e6;
@@ -150,17 +149,31 @@ p{
 .inbetweens img{
     margin-bottom: 1em;
 }
+.inbetweensDark{
+    height: 100vh;
+    background-color: #0e0e0e;
+}
 .thoughts{
-    background-image: url(thoughtshalf.png);
+    background-color: #e5e5e5;
+    /* background-image: url(thoughtshalf.png); */
     text-align: center;
     background-position: center;
-    padding: calc(12.5vh) 0;
+    padding: calc(7.5vh) 0;
 }
 .darkToDarkest{
     background-image: url(dark-darkestTrans.png);
+}
+.blackWhiteFade{
+    background-image: url(darkwhitefade.png);
+    height: 100vh;
 }
 .house{
     background-image: url(house.png);
     background-position: center;
     background-repeat: no-repeat;
+}
+footer{
+    background-image: url(/video/text.gif);
+    background-position: center;
+    height: 100vh;
 }
