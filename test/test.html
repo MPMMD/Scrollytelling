@@ -18,35 +18,33 @@
 </head>
 <body>
     <!-- intro -->
-    <header></header>
+    <header> <h1>Press f11 for fullscreen</h1></header>
     <div class="pipes"></div>
     <div class="fade"></div>
     <div class="app">
     <div class="container">
         <div class="containerText">
-            <p class="animateText">I live plagued by <span class="altFont"> shame</span>.</p>
-            <p class="animateText">The time I have during the day is limited.</p>
-            <p class="animateText">I fear it like a child.</p>
+            <p class="animateText">The story you are about to hear is a <span class="altFont">ridiculous</span> one.</p>
+            <p class="animateText">You can take it as some crazy rambling of an old guy.</p>
+            <p class="animateText">Hope you don't mind that do you?</p>
         </div>        
     </div>
     <div class="container">
         <div class="containerText">
-            <p> They did not believe me even when I told them. </p>
-            <p> And I bet neighter will you.</p>
-        
             <p> The fact that you are still here.</p>
-            <p> Tells me that you want to listen to my story.</p>
-            <p> It wont take too long.</p>
+            <p> Tells me that you want to.</p>
+            <p> It won't take too long.</p>
         </div>
     </div>
     <div class="container containerText">
         <!-- animate text class -->
-        <p class="animateText">It all happended when I was young.
+        <p class="animateText">It all happended when I was young.</p>
         <p class="animateText">When I played ball with my friends.</p>
-        <p class="animateText">We kicked it into an abandoned house.</p>
-        <p class="animateText">I lost at rock paper scissors.</p>
+        <p class="animateText">The ball flew into the abandoned house.</p>
+        <p class="animateText">As I was the so called "brave" one.</p>
     </div>
     <div class="container containerText">
+        <p class="animateText">They made me go.</p>
         <p class="animateText">So I went in.</p>
     </div>
     <!-- animation of zooming in on the house? -->
@@ -73,7 +71,7 @@
     <div id="bound-one" class="scroll-bound">
         <div class="content">
             <video muted="" preload="">
-            <source src="/video/dooropening2.mp4" type="video/mp4">
+            <source src="/video/dooropening.mp4" type="video/mp4">
             </video>
         </div>
     </div>
@@ -88,37 +86,68 @@
 
     <!-- men den er ikke så lang. Mangler living room også. Tilføj noget før tv'et - Living room efter furnitures?
      -->
-     <div class="inbetweens containerTextWhite">
-            <p>Hello?</p>
-     </div>
-     <div class="inbetweens"></div>
-     <div class="inbetweens containerTextWhite">
-        <img src="Mirror.png" alt="mirror">
+    <div class="inbetweens containerTextWhite">
+        <p>...</p>
     </div>
-     <div class="inbetweens"><img src="dresser.png" alt="dresser"></div>
+    <div class="inbetweens containerTextWhite">
+        <p>Hello?</p>
+    </div>
+    <div class="inbetweens containerTextWhite">
+        <p>...</p>
+    </div>
 
+    <!-- black background -->
+    "the house felt unexpectedly bigger, it looked like it landed inside the living room.
+    but how come I have yet to find it yet?"
+    
+    <div class="buffer thoughts">
+        <p>As I tried to find the room we the ball landed in, the furniture caught my eyes.</p>
+        <p class="animatedText">How old were these anyway?</p>
+        <p>I could not regonize myself in the mirror, even after wiping it with my sleeve.</p>
+        <p>It sure was dusty</p>
+    </div>
+     
+<!-- maybe keyframe it to fade in from right? think it's better-->
+    <div class="inbetweens">
+        <img src="dresser.png" alt="dresser" class="fadeInRight">
+    </div>
+     <div class="inbetweens">
+        <img src="Mirror.png" alt="mirror" class="fadeInRight">
+    </div>
+     <div class="inbetweens">
+        <img src="agony.png" alt="painting" class="fadeInRight">
+    </div>
+
+    <!-- add living room -->
     <div id="bound-two" class="scroll-bound">
         <div class="content">
             <video muted="" preload="">
-            <source src="/video/Merge.mp4" type="video/mp4">
+            <source src="/video/Livingroom.mp4" type="video/mp4">
             </video>
         </div>
     </div>
+
+
+    <div class="buffer darkToDarkest"></div>
         
     <div id="bound-three" class="scroll-bound">
         <div class="content">
             <video muted="" preload="">
-                <source src="https://cdn.ananaspizza.de/file/malte-image-store/keyframe-interval-20.mp4" type="video/mp4">
+                <source src="/video/Merge.mp4" type="video/mp4">
             </video>
         </div>
     </div>
 
     <div class="container">
         <img src="" alt=""> or gif? still image of the man silhouette, then scroll to the gif. with glitches of the mask on his face
-        <p>I woke up just like that</p>
+
+        <p>I woke up confused in front of the house</p>
+        <p>I felt a sharp pain to the back of my head.</p>
+        <p>Like I never went in, in the first place.</p>
     </div>
     <footer class="outtro">
-        <p>Since that day it have been occupying my mind.</p>
+        <p class="altFont"> I started fearing the dark.</p>
+        <p class="altFont">or rather things that could be in the dark.</p>
     </footer>
 </body>
 </html>
